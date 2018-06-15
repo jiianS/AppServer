@@ -7,12 +7,13 @@
 <title>detail</title>
 
 <style type="text/css">
-div{width = 200px height=200px;}
+#files{width:200px height:200px;}
+#files img{width:200px height:200px;}
+
 
 </style>
 <script type="text/javascript"
 	src="webjars/jquery/3.3.1/dist/jquery.min.js"></script>
-
 
 <script>
 	$(document).ready(function() {
@@ -50,7 +51,6 @@ div{width = 200px height=200px;}
 	}
 	
 	function filesHTML(data){
-        console.log("filesHTML +++++ ",data);
         $("#files").empty();
         for(var i =0; i<data.length;i++){
            var fileURL=data[i].fileURL;
@@ -65,16 +65,14 @@ div{width = 200px height=200px;}
 </head>
 <body>
 	<h1 id="title">board _ 글 내용</h1>
-	
-	
-	<hr>
+
 	<p id="contents"></p>
 	<div id="files"></div>
 	
 	<div >
 		<a href="bUpdate?boardNo=${param.boardNo}"> 수정</a>
-		<a href="bList">삭제</a>
-		<a href="bList">글 목록으로</a>
+		<a href="">삭제</a>
+		<a href="bList">글 목록</a>
 	</div>
 </body>
 </html>

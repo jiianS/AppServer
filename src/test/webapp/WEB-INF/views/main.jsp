@@ -7,16 +7,15 @@
 <title>Home</title>
 
 
-
 </head>
 <body>
 	<h1>Main _ App Server</h1>
 
-	<a href="login"> Login </a>
-	<br>
+	<a href="login"> Login </a>	<br>
 	<a href="user"> User Join </a><br>
-	<a href="bInsert"> boardInsert </a>
-	<br>
+	<a href="bInsert"> board Insert </a><br>
+	<a href="bList"> board+ List </a><br>
+	
 	
 	
 

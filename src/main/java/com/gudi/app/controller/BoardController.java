@@ -237,7 +237,7 @@ public class BoardController {
 			}
 
 			if (status == 1) {
-				map.put("msg", "글 작성이 완료 되었습니다");
+				map.put("msg", "글 수정이 완료 되었습니다");
 				map.put("status", PathUtil.OK);
 				map.put("boardNo", boardNo);
 			} else {

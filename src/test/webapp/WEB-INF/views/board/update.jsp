@@ -64,7 +64,7 @@ input {
              
        //함수들
        /************************************************************/
-          function update() {
+          function update(d) {
          	 $.ajax({
                   type: "post",
                   url: "bud",
@@ -72,8 +72,8 @@ input {
 						"boardNo" : boardNo,
 						"boardTitle" : $("form input").eq(0).val(), 
                       	"boardContents" : $("form input").eq(1).val(),
-                        "data" : JSON.stringify(d.upload)
-                        "delDate" : JSON.stringify(delDate)
+                        "data" : JSON.stringify(d.upload),
+                        "delData" : JSON.stringify(delData)
 					}
          	 
                }).done(function(data){
@@ -124,7 +124,7 @@ input {
 </head>
 <body>
 	<h1>board _ 글 수정</h1>
-	<form action="bUpdate" method="post" enctype="multipart/form-data">
+	<form action="" method="post" enctype="multipart/form-data">
 		<input type="text" name="boardTitle" placeholder="제목을 입력하세여"><br>
 		<input type="text" name="boardContents" placeholder="내용을 입력하세요"><br>
 		<input type="file" name="file" multiple="multiple"><br> <input
