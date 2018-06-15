@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="user">
+
+	<insert id="userInsert" parameterType="HashMap">
+		insert into users
+		(userEmail, userPassword, userName, regDate)
+		values
+		(#{userEmail},#{userPassword},#{userName},DATE_FORMAT(NOW(),'%Y%m%d'));
+	</insert>
+
+	<select id="userSelect" parameterType="HashMap" resultType="HashMap">
+		select * from users
+		where userEmail = #{userEmail}
+			and userPassword=#{userPassword}
+		limit 1			<!-- 한 개만 나오게 하기 위해서 limit 구문 사용-->
+		
+	</select>
+
+</mapper>
